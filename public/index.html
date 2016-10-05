@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Simple Box Moving Demo - Audience Page</title>
+		<title>Simple Box Moving Demo - Shared Version</title>
 		<meta charset="utf-8">    
 	</head>
 	<body>
-		<h1>Watch the Box Move!</h1>
-		<p>Only those connected on <a href="broadcaster">broadcaster/index.html</a> can move the box, but you will see it move on your screen here based on how they control it.</p>
+		<h1>Move the Box!</h1>
+		<p>Everyone connected to this page can move the box, but your controls will be fighting to override each other just like in <a href="https://en.wikipedia.org/wiki/Twitch_Plays_Pok%C3%A9mon">Twitch Plays Pokemon</a>!</p>
 		<p id="movebox" style="width:10%;height:10%;background:orange;position:absolute;top:45%;left:45%;"></p>
 		
 		<script src="/socket.io/socket.io.js"></script>
