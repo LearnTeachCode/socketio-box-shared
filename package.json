@@ -1,7 +1,7 @@
 {
-	"name": "socket-box-broadcast",
+	"name": "socket-box-shared",
 	"version": "0.1.0",
-	"description": "A sample app for Learn to Code LA, where one client can move a box around the screen and broadcast it to all other clients. Built with NodeJS, Express and SocketIO.",
+	"description": "A sample app for Learn to Code LA, where every client can move the same box around the screen (kind of like in Twitch Plays Pokemon). Built with NodeJS, Express and SocketIO.",
 	"dependencies": {
 		"express": "^4.10.2",
 		"socket.io": "^1.4.8"
