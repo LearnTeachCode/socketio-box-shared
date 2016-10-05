@@ -20,12 +20,12 @@ io.on('connection', function(socket) {
 	// Display this message in the server console
 	console.log('A user connected!');
 
-	// When the server receives a message named "master move",
-	socket.on('master move', function(data){
+	// When the server receives a message named "shared move",
+	socket.on('shared move', function(data){
 		// Display the received data in the server console
 		console.log(data);
-		// Send the data in a message called "master move" to every connected client EXCEPT the client who sent this initial "master move" message
-		socket.broadcast.emit('master move', data);
+		// Send the data in a message called "shared move" to every connected client EXCEPT the client who sent this initial "shared move" message
+		socket.broadcast.emit('shared move', data);
 	});
 
 });	// End of SocketIO code
