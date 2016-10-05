@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Box Moving Demo - Broadcaster Page</title>
+		<meta charset="utf-8">    
+	</head>
+	<body>
+		<h1>Move the Box!</h1>
+		<p>Press W, A, S, and D on your keyboard to move the box around. Any clients connected to <a href="/">public/index.html</a> will see it move on their screen, but only the broadcaster(s) can control it.</p>
+		<p id="movebox" style="width:10%;height:10%;background:orange;position:absolute;top:45%;left:45%;"></p>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="local.js"></script>
+	</body>
+</html>

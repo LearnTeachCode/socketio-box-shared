@@ -1,0 +1,12 @@
+{
+	"name": "socket-box-broadcast",
+	"version": "0.1.0",
+	"description": "A sample app for Learn to Code LA, where one client can move a box around the screen and broadcast it to all other clients. Built with NodeJS, Express and SocketIO.",
+	"dependencies": {
+		"express": "^4.10.2",
+		"socket.io": "^1.4.8"
+	},
+	"scripts": {
+		"start": "node app.js"
+	}
+}

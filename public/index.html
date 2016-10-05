@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Box Moving Demo - Audience Page</title>
+		<meta charset="utf-8">    
+	</head>
+	<body>
+		<h1>Watch the Box Move!</h1>
+		<p>Only those connected on <a href="broadcaster">broadcaster/index.html</a> can move the box, but you will see it move on your screen here based on how they control it.</p>
+		<p id="movebox" style="width:10%;height:10%;background:orange;position:absolute;top:45%;left:45%;"></p>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="local.js"></script>
+	</body>
+</html>
