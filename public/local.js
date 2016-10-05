@@ -9,8 +9,25 @@ var UP = 87, DOWN = 83, LEFT = 65, RIGHT = 68;
 // var UP = 38, DOWN = 40, LEFT = 37, RIGHT = 39;
 // But it doesn't really matter :)
 
-// When "master move" event is received, move the box using the data received
-socket.on('master move', function(keyCode){
+// Listen for key presses:
+document.addEventListener('keydown', moveAndBroadcast);
+
+// Move the box according to key presses and send the data to the server
+function moveAndBroadcast(event) {
+	// Normalize key codes across browsers:
+	var keyCode = event.which || event.keyCode || 0;
+	
+	// If one of our control keys was pressed, move the box and send the code to the server
+	if ( keyCode == UP || keyCode == DOWN || keyCode == LEFT || keyCode == RIGHT ) {
+		// Move the box on the screen accordingly:
+		moveTheBox(keyCode);
+		// Send the key code to the server, which will then broadcast it to other clients
+		socket.emit( 'shared move', keyCode );
+	}
+}
+
+// When "shared move" event is received, move the box using the data received
+socket.on('shared move', function(keyCode){
 	moveTheBox(keyCode);
 });
 
